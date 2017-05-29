@@ -17,7 +17,7 @@
   <DateInstalled>1496092405</DateInstalled>
   <Description>Version-stable build of R, rstudio, and R packages&#xD;
 &#xD;
-[b]Converted By Community Applications[/b]</Description>
+</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
