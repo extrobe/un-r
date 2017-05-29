@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>RStudio</Name>
+  <Repository>rocker/tidyverse</Repository>
+  <Registry>https://hub.docker.com/r/rocker/tidyverse/~/dockerfile/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/rocker/tidyverse/</Support>
+  <Overview>Version-stable build of R, rstudio, and R packages&#xD;
+&#xD;
+</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:8787]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.rawgit.com/extrobe/un-r/c7b98d12499aef04180a6bd4f18c77dd2c1155bb/rstudio-icon-s.png</Icon>
+  <ExtraParams/>
+  <DateInstalled>1496092405</DateInstalled>
+  <Description>Version-stable build of R, rstudio, and R packages&#xD;
+&#xD;
+[b]Converted By Community Applications[/b]</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8787</HostPort>
+        <ContainerPort>8787</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3838</HostPort>
+        <ContainerPort>3838</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/r/</HostDir>
+      <ContainerDir>/home/rstudio</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/rstudio</HostDir>
+      <ContainerDir>/usr/local/lib/R/custom-library</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Config Name="Port" Target="8787" Default="" Mode="tcp" Description="Container Port: 8787" Type="Port" Display="always" Required="false" Mask="false">8787</Config>
+  <Config Name="Port 2" Target="3838" Default="" Mode="tcp" Description="Container Port: 3838" Type="Port" Display="always" Required="false" Mask="false">3838</Config>
+  <Config Name="Workspace" Target="/home/rstudio" Default="" Mode="rw" Description="Container Path: /home/rstudio" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/r/</Config>
+  <Config Name="Custom Library Install Path" Target="/usr/local/lib/R/custom-library" Default="" Mode="rw" Description="Container Path: /usr/local/lib/R/custom-library" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/rstudio</Config>
+</Container>
